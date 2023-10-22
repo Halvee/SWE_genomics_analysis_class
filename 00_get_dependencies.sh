@@ -19,10 +19,14 @@ mkdir -p data/
 # 1. go into binary dir
 cd bin/
 # 2. download plink 1.9 (note for mac version if you're using M1 then you need Rosetta 2 installed)
+# NOTE : IF ERRORS CALLED, THEN GO TO THIS PAGE AND GET THE RIGHT LINK:
+# https://www.cog-genomics.org/plink/1.9/
 wget -N "https://s3.amazonaws.com/plink1-assets/plink_mac_20230116.zip"
 # wget -N "https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20230116.zip"
 # wget -N "https://s3.amazonaws.com/plink1-assets/plink_win64_20230116.zip"
 # 3. download plink 2.0
+# NOTE : IF ERRORS CALLED, THEN GO TO THIS PAGE AND GET THE RIGHT LINK:
+# https://www.cog-genomics.org/plink/2.0/
 wget -N "https://s3.amazonaws.com/plink2-assets/plink2_mac_arm64_20230915.zip"
 # wget -N "https://s3.amazonaws.com/plink2-assets/plink2_mac_20230915.zip"
 # wget -N "https://s3.amazonaws.com/plink2-assets/plink2_linux_x86_64_20230915.zip"
