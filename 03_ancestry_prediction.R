@@ -5,7 +5,7 @@ Main <- function(){
   # define input and output files
   in.plink.eigenval <- "results/ancestry_prediction/test_ref_gts.pca.eigenval"
   in.plink.eigenvec <- "results/ancestry_prediction/test_ref_gts.pca.eigenvec"
-  refpanel.file <- "data/integrated_call_samples_v3.20130502.ALL.panel"
+  refpanel.file <- "src/1kg_genotypes_lightweight/plink_bedbimfam/integrated_call_samples_v3.20130502.ALL.panel"
   outroot <- "results/ancestry_prediction/test_ref_gts.pca.eigenvec.res"
   
   # read 1000 genomes phase 3 reference panel data
