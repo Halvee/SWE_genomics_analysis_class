@@ -72,14 +72,14 @@ bin/plink \
 --out $OUTROOT.miss2_pruned.hardy
 
 # get SNPs that fail HWE in cases (10^-10)
-python scripts/pval_to_log10p.py \
+python3 scripts/pval_to_log10p.py \
   $OUTROOT.miss2_pruned.hardy.hwe \
   9 \
 | awk '{if (($3=="AFF") && ($9 >10)) {print $2}}' \
 > $OUTROOT.miss2_pruned.hardy.ca_fail.snpid.list
 
 # get SNPs that fail HWE in controls (10^-6)
-python scripts/pval_to_log10p.py \
+python3 scripts/pval_to_log10p.py \
   $OUTROOT.miss2_pruned.hardy.hwe \
   9 \
 | awk '{if (($3=="UNAFF") && ($9 >6)) {print $2}}' \
