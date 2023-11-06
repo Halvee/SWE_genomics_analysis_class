@@ -1,0 +1,23 @@
+# to be downloaded seperately 
+data/
+bin/
+src/
+
+# not sharing results in this repository
+results/
+
+# other directories not needed
+live_codings/
+misc/
+pre_written/
+
+# any Rmarkdown html files in parent dir
+**.html
+
+# unneeded files
+**.DS_Store
+**.RData
+**.Rhistory
+
+# license 
+LICENSE

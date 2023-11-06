@@ -1,0 +1,26 @@
+---
+title: PRS comparison
+output: html_notebook
+---
+```{r}
+
+```
+
+```{r}
+# plot PRS scores against one another and get R2
+df1<-read.table("results/prs/Height_PRS/sim_sim2a_eur_sa_merge.miss.height_prs.plink_CT.profile",header=T)
+df2<-read.table("results/prs/Height_PRS/sim_sim2a_eur_sa_merge.miss.height_prs.PRS-CS.profile",header=T)
+df1<-df1[,c("FID","IID","SCORE")]
+df2<-df2[,c("FID","IID","SCORE")]
+colnames(df1)[3] <- "plink_CT"
+colnames(df2)[3] <- "PRSCS"
+df<-merge(df1, df2, by="IID")
+plot(df$plink_CT, df$PRSCS, 
+     xlab='PRS (plink_CT)', ylab='PRS (PRS-CS)')
+linear_mdl <- lm(PRSCS~plink_CT, data=df)
+abline(linear_mdl)
+```
+
+```{r}
+summary(linear_mdl)
+```
